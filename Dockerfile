@@ -19,7 +19,7 @@ RUN mkdir hacking \
 && cd ..
 RUN git config --global user.email "therese.mikkelsen.skaar@gmail.com"\
 && git config --global user.name "Therese Mikkelsen Skaar" \
-&& git config --global url."https://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@github.com/".insteadOf"https://github.com" \
+&& git config --global url."https://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@github.com/".insteadOf "https://github.com" \
 && mkdir -p github.com/Theresemskaar
 USER root
 RUN curl -SL https://go.dev/dl/go1.21.7.OS-ARCH.tar.gz \
