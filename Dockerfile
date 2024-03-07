@@ -9,7 +9,7 @@ nano \
 wget \
 curl \
 git
-RUN useradd -G sudo -m -d /home/BRUKER -s /bin/bash -p "$(openssl
+RUN useradd -G sudo -m -d /home/Theresemskaar -s /bin/bash -p "$(openssl
 passwd -1 1234)" Theresemskaar
 USER Theresemskaar
 WORKDIR /home/Theresemskaar
