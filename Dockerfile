@@ -9,22 +9,17 @@ nano \
 wget \
 curl \
 git
-RUN useradd -G sudo -m -d /home/Theresemskaar -s /bin/bash -p "$(openssl
-passwd -1 1234)" Theresemskaar
+RUN useradd -G sudo -m -d /home/Theresemskaar -s /bin/bash -p "$(openssl passwd -1 1234)" Theresemskaar
 USER Theresemskaar
 WORKDIR /home/Theresemskaar
 RUN mkdir hacking \
 && cd hacking \
-&& curl -SL
-https://raw.githubusercontent.com/uia-worker/is105misc/master/sem01v2
-4/pawned.sh > pawned.sh \
+&& curl -SL https://raw.githubusercontent.com/uia-worker/is105misc/master/sem01v24/pawned.sh > pawned.sh \
 && chmod 764 pawned.sh \
 && cd ..
-RUN git config --global user.email "therese.mikkelsen.skaar@gmail.com"
-\
+RUN git config --global user.email "therese.mikkelsen.skaar@gmail.com"\
 && git config --global user.name "Therese Mikkelsen Skaar" \
-&& git config --global url."https://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@github.com/".insteadOf
-"https://github.com" \
+&& git config --global url."https://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@github.com/".insteadOf"https://github.com" \
 && mkdir -p github.com/Theresemskaar
 USER root
 RUN curl -SL https://go.dev/dl/go1.21.7.OS-ARCH.tar.gz \
