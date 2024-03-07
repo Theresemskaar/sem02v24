@@ -22,7 +22,7 @@ https://raw.githubusercontent.com/uia-worker/is105misc/master/sem01v2
 && cd ..
 RUN git config --global user.email "therese.mikkelsen.skaar@gmail.com"
 \
-&& git config --global user.name "Theresemskaar" \
+&& git config --global user.name "Therese Mikkelsen Skaar" \
 && git config --global url."https://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@github.com/".insteadOf
 "https://github.com" \
 && mkdir -p github.com/Theresemskaar
