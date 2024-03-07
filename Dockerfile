@@ -36,6 +36,7 @@ SHELL ["/bin/bash", "-c"]
 RUN mkdir -p $HOME/go/{src,bin}
 ENV GOPATH="/home/theresemskaar/go"
 ENV PATH="${PATH}:${GOPATH}/bin:/usr/local/go/bin"
+ARG DEBIAN_FRONTEND=noninteractive
 RUN curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf \
 | sh -s -- -y
 ENV PATH="${PATH}:${HOME}/.cargo/bin"
